@@ -161,7 +161,6 @@ a{
     cursor: pointer;
     overflow: hidden;
     padding: 40vh 40vw;
-    border: 2px solid black;
 }
 .reload div{
     transition: 0.7s ease-in-out;
