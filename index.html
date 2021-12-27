@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="favicon.png" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a pracical demonstration of User Interface Designs">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, UID Concepts">
+    <meta name="author" content="Sanket Banerjee">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dc9678cfdb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Uid 3rd Assignment</title>
+</head>
+<body>
+    <div class="reload" onclick="refresh()">
+        <div>R</div>
+        <div>e</div>
+        <div>f</div>
+        <div>r</div>
+        <div>e</div>
+        <div>s</div>
+        <div>h</div>
+    </div>
+    <div class="window primary">
+        <div class="title_bar">
+            <div class="title">Primary Window</div>
+            <div class="title_op">
+                <i class="fas fa-minus"></i>
+                <i class="far fa-square" onclick="maxPrimary()"></i>
+                <i class="fas fa-times" onclick="closePrimary()"></i>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav_cont">
+                <div class="nav_items">
+                    <div class="tab shop">Menu Title 1
+                        <div class="dropdown">
+                            <div class="column">
+                                <div class="heading">Section 1</div>
+                                <div class="opt">Option 1</div>
+                                <div class="opt">Option 2</div>
+                                <div class="opt">Option 3</div>
+                            </div>
+                            <div class="column">
+                                <div class="heading">Section 2</div>
+                                <div class="opt">Option 1</div>
+                                <div class="opt">Option 2</div>
+                                <div class="opt">Option 3</div>
+                                <div class="opt">Option 4</div>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab contact">Cascade Drop Down
+                        <div class="dropdown">
+                            <a href="#"><div class="option">Option 1</div></a>
+                            <a href="#"><div class="option">Option 2</div></a>
+                            <a href="#">
+                                <div class="option cascade">Cascade Menu <i class="fas fa-angle-right"></i>
+                                    <div class="dropdown">
+                                        <a href="#"><div class="option">Option 1</div></a>
+                                        <a href="#"><div class="option">Option 2</div></a>
+                                        <a href="#"><div class="option">Option 3</div></a>
+                                        <a href="#"><div class="option">Option 4</div></a>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#"><div class="option">Option 3</div></a>
+                        </div>
+                    </div>
+                    <div class="tab" onclick="openPopMenu()">Pop Up Menu</div>
+                </div>
+            </div>
+        </div>
+        <div class="popup_menu">
+            <div class="close_" onclick="closePopMenu()">X</div>
+            <div class="column col1">
+                <div class="heading">Section 1</div>
+                <div class="opt">Option 1</div>
+                <div class="opt">Option 2</div>
+                <div class="opt">Option 3</div>
+            </div>
+            <div class="column">
+                <div class="heading">Section 2</div>
+                <div class="opt">Option 1</div>
+                <div class="opt">Option 2</div>
+                <div class="opt">Option 3</div>
+                <div class="opt">Option 4</div>    
+            </div>
+        </div>
+        <div class="body">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+                Dialog Box
+            </button>
+            <button type="button" class="btn btn-dark ml-5" onclick="secondaryActive()">
+                Secondary Window 1
+            </button>
+            <button type="button" class="btn btn-dark ml-5" onclick="secondaryActive2()">
+                Secondary Window 2
+            </button>
+            <div class="window secondary">
+                <div class="title_bar">
+                    <div class="title">Secondary Window 1</div>
+                    <div class="title_op">
+                        <i class="fas fa-minus" onclick="minusWindow()"></i>
+                        <i class="far fa-square" onclick="expandWindow()"></i>
+                        <i class="fas fa-times" onclick="closeWindow()"></i>
+                    </div>
+                </div>
+                <div class="body">
+                    <img src="rick_roll.gif" alt="You were supposed to get Rick Rolled">
+                </div>
+            </div>
+            <div class="window secondary2">
+                <div class="title_bar">
+                    <div class="title">Secondary Window 2</div>
+                    <div class="title_op">
+                        <i class="fas fa-minus" onclick="minusWindow2()"></i>
+                        <i class="far fa-square" onclick="expandWindow2()"></i>
+                        <i class="fas fa-times" onclick="closeWindow2()"></i>
+                    </div>
+                </div>
+                <div class="body">
+                    <img src="mj.gif" alt="Mich">
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">What Are You Doing Here?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span style="color: white;" onclick="removeAdvice()">X</span>
+                    </button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <img src="rock.gif" alt="If you smellllllll What The Rock is Cooking!!!!!!" height="60vh">
+                    </div>
+                    <div class="modal-footer">
+                        <div class="advice">Just Run Dude!!!!!</div>
+                        <button type="button" class="btn btn-success" onclick="removeAdvice()" data-dismiss="modal">RUN</button>
+                        <button type="button" class="btn btn-danger" onclick="advice()">STARE</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
