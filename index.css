@@ -224,6 +224,7 @@ a{
     align-items: center;
     background-color: rgb(31, 31, 31);
     color: white;
+    position: relative;
 }
 .window .title_bar .title_op i{
     padding: 7px;
@@ -240,18 +241,19 @@ a{
     justify-content: center;
     align-items: center;
 }
-
+[draggable=true] {
+    cursor: move;
+}
 .window .body .window{
     margin: 0;
     height: 60vh;
     position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%,50%) scale(0);
+    transform: scale(0);
     width: 50%;
     opacity: 0;
     transition: 0.5s ease-in-out;
     background-color: rgba(69, 69, 69, 0.8);
+    /* resize: both; */
 }
 .window .body .window .body{
     height: 350px;
@@ -260,18 +262,50 @@ a{
     height: 60vh;
     transform: translateY(44px);
 }
+.window .body .window .title_bar .help_sec{
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translate(-50px,45px);
+    border-radius: 5px;
+    background-color: rgb(100, 100, 100);
+    text-align: center;
+    font-size: 14px;
+    width: fit-content;
+    padding: 5px;
+    z-index: 5;
+}
+.window .body .window .title_bar .help_sec.active{
+    animation: help_popup 0.5s ease-in-out forwards;    
+}
+@keyframes help_popup {
+
+    0%{
+        height: fit-content;
+        transform: translate(-50px,45px);
+
+    }
+    100%{
+        height: fit-content;
+        opacity: 1;
+        transform: translate(-50px,25px);
+    }
+}
+
 .modal-body img{
     height: 60vh;
 }
 .window .body .window.active{
-    transform: translate(-50%,50%) scale(1);
+    transform: scale(1);
     opacity: 1;
 }
 .window .body .window.active.minus{
     bottom: 0;
     left: 0;
     height: 40px;
-    width: 250px;
+    width: 300px;
     transform: translate(0%,0%) scale(1);
     border: 0px;
     border-radius: 0;

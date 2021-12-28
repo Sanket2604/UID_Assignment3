@@ -99,10 +99,12 @@
             <button type="button" class="btn btn-dark ml-5" onclick="secondaryActive2()">
                 Secondary Window 2
             </button>
-            <div class="window secondary">
+            <div class="window secondary" id="sec_window1">
                 <div class="title_bar">
                     <div class="title">Secondary Window 1</div>
                     <div class="title_op">
+                        <i class="fas fa-question-circle" onclick="helpPopUp1()"></i>
+                        <div class="help_sec help_sec1">You Just Got Rick Rolled!!!</div>
                         <i class="fas fa-minus" onclick="minusWindow()"></i>
                         <i class="far fa-square" onclick="expandWindow()"></i>
                         <i class="fas fa-times" onclick="closeWindow()"></i>
@@ -112,17 +114,19 @@
                     <img src="rick_roll.gif" alt="You were supposed to get Rick Rolled">
                 </div>
             </div>
-            <div class="window secondary2">
+            <div class="window secondary2" id="sec_window2">
                 <div class="title_bar">
                     <div class="title">Secondary Window 2</div>
                     <div class="title_op">
+                        <i class="fas fa-question-circle" onclick="helpPopUp2()"></i>
+                        <div class="help_sec help_sec2">Mj Got Some Smooth Moves!!!</div>
                         <i class="fas fa-minus" onclick="minusWindow2()"></i>
                         <i class="far fa-square" onclick="expandWindow2()"></i>
                         <i class="fas fa-times" onclick="closeWindow2()"></i>
                     </div>
                 </div>
                 <div class="body">
-                    <img src="mj.gif" alt="Mich">
+                    <img src="mj.gif" alt="Mj's Moon Walk!!!">
                 </div>
             </div>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
